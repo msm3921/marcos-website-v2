@@ -1,0 +1,550 @@
+/*
+Theme Name: Bootstrap to Wordpress
+Theme URI: http://underscores.me/
+Author: Matt Mueller
+Author URI: http://underscores.me/
+Description: A custom WordPress theme using Bootstrap
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bootstrap2wordpress
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Bootstrap to Wordpress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+/******************************************/
+/***********Accessibility******************/
+/******************************************/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+
+/******************************************/
+/***********General************************/
+/******************************************/
+
+body {
+	margin-top: 50px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-size: 100%;
+  	color: #ecf0f1;
+  	background: #222222;
+}
+
+
+/* doing this separately without > or li keeps background tab highlighted when rolled over */
+.navbar-nav .current_page_item,
+.navbar-nav .current_page_parent{ 
+  background-color: #080808; 
+} 
+/* doing this separate is necessary to keep tab background active while keeping white type */ 
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+  color: #fff;
+} 
+
+
+.admin-bar .navbar-fixed-top {
+	top: 32px;
+}
+
+/*Global*/	
+
+h1,h2,h3,h4,h5,h6 {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h1,h2 {
+	margin: 0 0 40px;
+}
+
+h3 {
+	margin: 20px 0;
+	color: red;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+p{
+	margin: 0 0 15px;
+}
+
+p.lead{
+	font-weight: 400;
+	text-align: center;
+}
+
+a:link, a:visited{
+	color: #dd5638;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #c9302c;
+}
+
+button, input, .btn, a.btn {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	color: white;
+}
+
+.btn{
+	font-weight: bold;
+}
+
+button.btn:focus{
+	outline: none !important;
+    background: white;
+	color: black;
+    /* background-color: #449d44; */
+    border-color: #255625;
+
+}
+
+.btn-danger{
+	background-color: #dd5638;
+	border-color: #d95131;
+}
+
+.btn-success{
+	background: #4A4A4A; /*#79b044;*/
+	border: none;
+}
+
+.btn-success:hover{
+	background: white;
+	color: black;
+	border-color: #6a9b3d;
+}
+
+img {
+	max-width: 100%;
+}
+
+.module-content{
+	background: url("/wp-content/themes/bootstrap2wordpress/assets/img/tile.jpg") top left repeat;
+}
+
+blockquote{
+	padding: 0;
+	border:none;
+	font-style: italic;
+	text-align: left;
+}
+
+blockquote cite{
+	display: block;
+	color:#777;
+	margin: 15px 0 0 0;
+}
+
+/*takes away that indentiation that comes along with blockquotes*/
+blockquote:before{
+	display: none;
+}
+
+/* ==== LAYOUT ==== */
+
+
+/*This will address any row that has a class of row before it*/
+.row + .row{
+	margin-top: 20px;
+}
+
+section{
+	padding: 30px 0;
+}
+
+section.main-content{
+	padding: 40px 0;
+}
+
+.section-header{
+	text-align: center;
+}
+
+#primary{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+/*Feature Image*/
+
+.feature-image{
+	display: table;
+	width: 100%;
+}
+
+.feature-image-default {
+	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/stuff-feature.jpg') no-repeat;
+	background-size: cover;
+}
+
+.feature-image-default-alt {
+	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/hipster-stuff.jpg') no-repeat;
+	background-size: cover;
+}
+
+.feature-image h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
+
+/*HERO*/
+
+#hero{
+	color:black;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+#hero h1 {
+	font-size: 5em;
+}
+
+.hero-image{
+	display: table;
+	width: 100%;
+}
+
+.hero-image-default {
+	color:white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+#hero .hero-text{
+	margin-top: 30px;
+}
+
+.hero-text h1{
+	color:red;
+	font-weight: 400;
+}
+
+
+/*Content-Optin*/
+#optin {
+	background: black;
+	color: white ;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+
+/*Sub Section*/
+#subSection p{
+	padding: 30px;
+	font-size: 3em;
+}
+
+
+/*Content-Promo*/
+#content-promo p{
+	color: white;
+}
+
+/*Content-Book*/
+#content-book p{
+	color: white;
+}
+
+/*Content-Blog*/
+#content-blog p{
+	color: white;
+}
+
+
+/*Content-Latest*/
+#content-latest h1{
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+
+
+#content-latest p{
+	color: white;
+}
+
+/*Content-About*/
+
+
+
+/*Sign-Up*/
+#signup{
+	text-align: center;
+	background-size: cover;
+	color: black;
+}	
+
+#signup h2{
+	font-weight: normal;
+	color:red;
+}
+
+/*Footer*/
+
+footer{
+	/*background-color: #4A4A4A;*/
+	color: white;
+	padding:20px 0 10px;
+	font-size: 12px;
+}
+
+footer p{
+	margin: 0;
+	text-align: center;
+}
+
+footer a:link,footer a:visited{
+	color: white;
+}
+
+footer li.signup-link a{
+	color:#dd5368;
+}
+
+footer li.signup-link a:hover{
+	font-weight: bold;
+}
+
+footer a:hover{
+	color: #dd5638;
+}
+
+.footerlinks{
+text-align: center;
+}
+
+
+/*BLOG*/
+
+.post, .widget, #comments{
+	position: relative;
+	border: solid 1px #ddd;
+	margin: 0 0 40px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius: 4px;
+}
+
+.post header,
+.post .post-excerpt,
+.post .post-body,
+#comments .comments-wrap {
+	padding: 20px;
+}
+
+.post header h3,
+.post header h1 {
+	margin: 0 0 15px;
+	padding: 0 0 15px;
+	border-bottom: solid 1px #ddd;
+}
+
+.post header h1{
+	font-size: 24px;
+}
+
+.post-image img{
+	height: auto;
+}
+
+.post-details{
+	font-size: 12px;
+	width:90%;
+}
+
+.post-details i.fa{
+	padding-left:10px;
+}
+
+.post-details i.fa:first-child{
+padding: 0;
+}
+
+
+/*Resources*/
+
+.resource{
+	width: 31.33333333%;
+	float: left;
+	margin: 0 3% 40px 0;
+}
+
+.resource:nth-child(3n){
+	margin-right: 0;
+}
