@@ -1,6 +1,10 @@
 @media (min-width: 768px){
   /*tablet portrait*/
 
+#content-latest h3{
+  font-size: 3em;
+}
+
 
 
 }  /*END 768*/

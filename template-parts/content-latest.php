@@ -14,14 +14,14 @@ $latest_desc      	    = get_field('latest_description');
 		<div class="section-header">
 		<!-- If user uploaded an image -->
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="latest-cover col-sm-5">
 				<?php if(!empty($latest_cover)) : ?>
 
 			<img src="<?php echo $latest_cover['url']; ?>" alt="<?php echo $latest_cover['alt']; ?>">
 
 	    		<?php endif; ?>
 			</div> <!-- col -->	
-			<div class="col-sm-6 align-self-center">
+			<div class="latest-info">
 					<h3><?php echo $latest_title ?></h3>
 					<p><?php echo $latest_desc ?></p>
 			</div> <!-- col -->				
