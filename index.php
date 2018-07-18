@@ -19,7 +19,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="section-header">
 		<div>
-				<h3>Did you know...</h1>
+				<h3>Did you know...</h3>
+				<h4>Facts I've Stumbled Upon While I Research Future Books!</h4>
 		</div>
 	    <div class="row" id="primary">
 	    

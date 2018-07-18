@@ -71,7 +71,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 0em;
+	margin-left: 1.5em;
 }
 
 .aligncenter {
@@ -245,33 +245,21 @@ padding:8px;
 }
 
 .marcos-dropdown.open {
-  /*margin-bottom: 35px;*/
-  /*background-color: #333;*/
-}
-
-.marcos-dropdown > a:after {
-   color: #fff;
-   content: ' ▾';
-   padding-left: 5px;
-}
-
-.marcos-dropdown.close {
-  margin-bottom: 0px;
+  margin-bottom: 40px;
+  background-color: #333;
 }
 
 .marcos-dropdown:hover{
  background-color: #333;
  position: relative;
+ margin-bottom: 40px;
 }
 
 .drop-ul{
 background-color: #333;
-position: relative;
+/*width: 100%;*/
 }
 
-.hideMe{
-	display: none;
-}
 
 /*Global*/	
 
@@ -317,30 +305,11 @@ a:hover{
 	color: #c9302c;
 }
 
-input, .btn, a.btn {
+button, input, .btn, a.btn {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
-	color: black;
-}
-
-/*input {
-	color: black;
-}*/
-
-.optin-button-text button{
 	color: white;
 }
-
-#footer-btn{
-	color: white;
-    background: #4A4A4A;
- }
-
-#footer-btn:hover{
-	color: black;
-    background: white;
- }
-
 
 .btn{
 	font-weight: bold;
@@ -562,13 +531,6 @@ padding: 0;
 	display: block;
 }
 
-.post-body p em {
-font-style: italic;
-}
-
-.post-body p a {
-text-decoration: underline;
-}
 
 /*Content-Latest*/
 #content-latest h1{
@@ -583,13 +545,7 @@ text-decoration: underline;
 }
 
 /*Content-About*/
-#Content-About img{
-	padding-top: 20px;
-}
 
-#Content-About p{
-	padding-top: 20px;
-}
 
 
 /*Sign-Up*/
@@ -741,22 +697,6 @@ text-align: center;
   font-size: 1.5em;
 }
 
-.post-body p{
-  font-size: 1.5em;
-}
-
-.widget-area a{
-  font-size: 1.5em;
-}
-
-.nav-previous a{
-  font-size: 1.5em;
-}
-
-.nav-next a{
-  font-size: 1.5em;
-}
-
 
 /*Content-Latest*/
 #content-latest h1{
@@ -874,9 +814,6 @@ text-align: center;
 /************************************/
 @media (min-width: 768px){
   /*tablet portrait*/
-.js-nav{
-	padding:1px;
-}
 
 #content-latest h3{
   font-size: 3em;
@@ -900,13 +837,6 @@ text-align: center;
 
 
 }  /*END 768*/
-
-@media (min-width: 769px){
-.js-nav{
-	padding:0px;
-}
-
-}
 
 
 /*Fix the top margin when logged in*/

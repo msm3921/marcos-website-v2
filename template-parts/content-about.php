@@ -13,16 +13,16 @@ $author_image			= get_field('author_image');
 		</div>
 		<!-- If user uploaded an image -->
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-6 alignright">
 				<?php if(!empty($author_image)) : ?>
 
 			<img src="<?php echo $author_image['url']; ?>" alt="<?php echo $author_image['alt']; ?>">
 
 	    		<?php endif; ?>
-			</div> <!-- col -->
-			<div class="col-sm-6">
+			</div> <!-- col -->	
+			<div>
 				<p><?php echo $author_story?></p>
-			</div> <!-- col -->					
+			</div> <!-- col -->				
 		</div>
 
 	</div>

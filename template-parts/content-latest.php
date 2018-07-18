@@ -3,12 +3,13 @@
 $latest_cover			= get_field('latest_cover');
 $latest_title			= get_field('latest_title');
 $latest_desc      	    = get_field('latest_description');
+$latest_h1				= get_field('latest_h1');
  ?>
 <!-- latest-->
 
 <section id="content-latest">
 	<div>
-				<h1>Latest Release</h1>
+				<h1><?php echo $latest_h1 ?></h1>
 	</div>
 	<div class="container">
 		<div class="section-header">

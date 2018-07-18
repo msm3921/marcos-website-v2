@@ -118,7 +118,7 @@ add_action( 'widgets_init', 'bootstrap2wordpress_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bootstrap2wordpress_scripts() {
-	wp_enqueue_style( 'bootstrap2wordpress-style', get_stylesheet_uri(),NULL,microtime());
+	wp_enqueue_style( 'bootstrap2wordpress-style', get_stylesheet_uri());
 
 	wp_enqueue_script( 'bootstrap2wordpress-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

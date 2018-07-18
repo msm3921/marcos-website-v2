@@ -11,23 +11,6 @@
 
 ?>
 
-<?php wp_footer(); ?>
-<!-- SIGN UP SECTION -->
-
-		<section id="signup" data-type="background" data-speed="4">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<!--Offset works here to center content. Always
-						have a total of 12. In this case we only want 6 columns and by having two columns of 3 on each side this will center those two colunns of 6 -->
-						
-						<h2><strong>Are you ready to find out about free books before they get published?</strong></h2>
-						<p><a id="footer-btn"class="btn btn-success btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">Yes. Sign me up!</a> </p>
-					</div> <!-- end col -->
-				</div>
-			</div>
-		</section>	
-
 		<!-- FOOTER -->
 
 		<footer>

@@ -21,18 +21,6 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/reset.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/css/bootstrap.min.css">
-	<!-- Mobile -->
-	<?php $cssver = microtime( get_stylesheet_directory() . '/assets/css/mobile.css' ); ?>
-	<link href="<?php bloginfo('stylesheet_directory');?>/assets/css/mobile.css'); ?>?v=<?=$cssver?>" rel="stylesheet" media="screen" type="text/css"/>
-	<!-- <link rel="stylesheet" href=""> -->
-	<!-- Tablet -->
-	<?php $cssver = microtime(get_stylesheet_directory() . '/assets/css/tablet.css' ); ?>
-	<link href="<?php bloginfo('stylesheet_directory');?>/assets/css/tablet.css');?>/assets/css/mobile.css'); ?>?v=<?=$cssver?>" rel="stylesheet" media="screen" type="text/css"/>
-	<!-- <link rel="stylesheet" href=""> -->
-	<!-- Desktop -->
-	<?php $cssver = microtime(get_stylesheet_directory() . '/assets/css/desktop.css' ); ?>
-	<link href="<?php bloginfo('stylesheet_directory');?>/assets/css/desktop.css');?>/assets/css/mobile.css'); ?>?v=<?=$cssver?>" rel="stylesheet" media="screen" type="text/css"/>
-	<!-- <link rel="stylesheet" href=""> -->
 	<!-- Font Icons -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/font-awesome/css/font-awesome.min.css">
 	<!-- Google Fonts -->
@@ -46,43 +34,44 @@
 	<!--[endif]-->
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'Marcos Hernandez' ); ?></a>
 		<!-- HEADER -->
 		<header class="site-header" role="banner">
 			<!-- Navbar -->
 			<div class="navbar-wrapper">
-
-				<div class="navbar navbar-inverse navbar-fixed-top navbar-right" role="navigation">
+				<nav class="navbar navbar-inverse navbar-fixed-top navbar-right" role="navigation">
 					<div class="container">
-						<!-- <div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only"> Toggle Navigation</span>
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle dropdown-menu-right" data-toggle="collapse" data-toggle="dropdown" data-target=".navbar-collapse">
+								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand"href="/">
-								<img src="<?php bloginfo();?>/assets/img/temp-logo.png"
-								 alt="Marcos Hernandez"
-								>
-							</a> 
-						</div>  --><!--Navbar header-->
-						
+
+						</div> <!-- navbar header -->
 						<?php
 							wp_nav_menu( array(
 								'theme_location'    => 'Primary', /* see register_nav_menus() in functions.php */
 								'container'         => 'nav',
 								'container_class'   => 'navbar-collapse collapse',
-								'menu_class'        => 'nav navbar-nav navbar-right' 
+								'menu_class'        => 'nav navbar-nav navbar-right js-nav'
 								)
 							);
-						?>
+						?> 
 					</div> <!--container-->
 
-				</div> <!--Navbar-->
+				</nav> <!--navbar-->
 
 			</div> <!--Navbar Wrapper -->
 
 		</header>
+
+
+
+
+
+
+
